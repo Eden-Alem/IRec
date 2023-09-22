@@ -29,7 +29,7 @@ similarity = pickle.load(open('../Model Development/similarity.pkl','rb'))
 
 # Fetch posters from the TMDb database
 def fetch_poster(movie_id):
-    response = requests.get('https://api.themoviedb.org/3/movie/{}?api_key=8752db6ca168ae4b1865aeac42f13afc&language=en-US'.format(movie_id))
+    response = requests.get('https://api.themoviedb.org/3/movie/{}?api_key=PLACE_API_KEY_HERE&language=en-US'.format(movie_id))
     data = response.json()
     return "https://image.tmdb.org/t/p/w500/" + data['poster_path']
 
